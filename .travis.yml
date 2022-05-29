@@ -12,7 +12,7 @@ script:
   - cd server && npm run test
 branches:
   only:
-    - master
+    - main
     - develop
     - Travis-config
 
