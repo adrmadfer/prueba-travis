@@ -11,7 +11,6 @@ install:
   - npm install --save-dev nyc
 script:
   - npm run test
-  - mkdir .nyc_output
   - npx nyc report --reporter=lcov
 
 after_success:
