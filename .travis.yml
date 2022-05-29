@@ -9,7 +9,7 @@ before_install:
 install:
   - cd server && npm install
 script:
-  - cd server && npm run test
+  - npm run test
 branches:
   only:
     - main
