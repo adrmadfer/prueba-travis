@@ -6,7 +6,7 @@ services:
   - mysql
 before_script:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS tfgdb_test;'
-  - sequelize db: sync
+  - "sequelize db: sync"
 install:
   - cd server && npm install
 script:
