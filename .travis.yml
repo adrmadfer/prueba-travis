@@ -6,6 +6,7 @@ services:
   - mysql
 install:
   - cd server && npm install
+  - npm install --save-dev nyc
 script:
   - npm run test
 branches:
