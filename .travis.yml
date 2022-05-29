@@ -11,7 +11,7 @@ install:
   - npm install --save-dev nyc
 script:
   - npm run test
-  - npm nyc report --reporter=lcov
+  - npx nyc report --reporter=lcov
 
 after_success:
   - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r *.lcov
