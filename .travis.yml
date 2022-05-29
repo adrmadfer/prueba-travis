@@ -9,12 +9,13 @@ install:
   - npm install codacy-coverage --save
   - npm install mocha-lcov-reporter --save
   - npm install --save-dev nyc
+
 script:
   - npm run test
   - npx nyc report --reporter=lcov
 
 after_success:
-  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/*.lcov
+  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/*.info
 
 branches:
   only:
