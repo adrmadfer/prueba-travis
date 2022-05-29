@@ -14,7 +14,7 @@ script:
   - npx nyc report --reporter=lcov
 
 after_success:
-  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r lcov
+  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r .nyc_output/*.lcov
 
 branches:
   only:
