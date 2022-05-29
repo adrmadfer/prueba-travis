@@ -19,6 +19,10 @@ before( (done) => {
         where: {}
     })
 
+    PersonasDependientes.destroy({
+        where: {}
+    })
+
 
 
     PersonasDependientes.create({
