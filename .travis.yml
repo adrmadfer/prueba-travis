@@ -4,7 +4,7 @@ node_js:
   - 16.14.0
 services:
   - mysql
-before_install:
+before_script:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS tfgdb_test;'
 install:
   - cd server && npm install
