@@ -5,7 +5,8 @@ node_js:
 services:
   - mysql
 before_script:
-  - mysql -e 'CREATE DATABASE tfgdb_test;'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS tfgdb_test;'
+  - sequelize db: sync
 install:
   - cd server && npm install
 script:
